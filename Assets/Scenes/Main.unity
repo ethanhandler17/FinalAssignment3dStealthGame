@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 922105478824290907, guid: d87a8bde178911443bf5192f45745118,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ghost
+      objectReference: {fileID: 0}
     - target: {fileID: 1923638089761079029, guid: d87a8bde178911443bf5192f45745118,
         type: 3}
       propertyPath: Priority
@@ -1193,7 +1198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1106144124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,7 +1253,7 @@ PrefabInstance:
     - target: {fileID: 649513800275143118, guid: a2d842e6afcdf27429403fa3d01747fa,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5516216721385154884, guid: a2d842e6afcdf27429403fa3d01747fa,
         type: 3}
@@ -1777,6 +1782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ghost (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 922105478824290907, guid: d87a8bde178911443bf5192f45745118,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ghost
       objectReference: {fileID: 0}
     - target: {fileID: 1923638089761079029, guid: d87a8bde178911443bf5192f45745118,
         type: 3}
@@ -2531,7 +2541,7 @@ PrefabInstance:
     - target: {fileID: 3075834729866360404, guid: 9040732eb056cd544aeae812c53e2666,
         type: 3}
       propertyPath: shieldTime
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3075834729866360404, guid: 9040732eb056cd544aeae812c53e2666,
         type: 3}

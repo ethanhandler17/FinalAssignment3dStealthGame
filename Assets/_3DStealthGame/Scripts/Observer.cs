@@ -51,8 +51,28 @@ public class Observer : MonoBehaviour
                 // Check if the raycast hits the player.
                 if (raycastHit.collider.transform == player)
                 {
-                    // Call the game ending caught player method.
-                    gameEnding.CaughtPlayer();
+                    // Check if player is shielded - if so, destroy this observer instead of catching player
+                    if (Shield.IsPlayerShielded)
+                    {
+                        // Player is shielded, destroy the parent ghost GameObject
+                        Debug.Log("Ghost destroyed by shielded player!");
+                        
+                        // Destroy the parent GameObject (the actual ghost prefab)
+                        if (transform.parent != null)
+                        {
+                            Destroy(transform.parent.gameObject);
+                        }
+                        else
+                        {
+                            // Fallback: destroy root if no parent
+                            Destroy(transform.root.gameObject);
+                        }
+                    }
+                    else
+                    {
+                        // Player is not shielded, catch them
+                        gameEnding.CaughtPlayer();
+                    }
                 }
             }
 

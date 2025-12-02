@@ -2,21 +2,27 @@
 
 A Unity 6.2 stealth game where players must navigate through a level while avoiding detection by AI observers. Reach the exit to win, but be careful - if you're caught, you'll have to start over!
 
+**GitHub Repository**: [https://github.com/ethanhandler17/FinalAssignment3dStealthGame](https://github.com/ethanhandler17/FinalAssignment3dStealthGame)
+
+**Gameplay Video**: [Watch on YouTube](https://youtube.com/shorts/QnBGe6-5jmM)
+
 ## 🎮 Game Features
 
 ### Core Mechanics
 - **Player Movement**: Smooth third-person movement with walk/run mechanics
   - Walk with WASD/Arrow Keys
-  - Hold Left Shift to run
+  - **Sprint Button**: Hold Left Shift to sprint and move faster
   - Smooth rotation and movement animations
 
 - **Stealth System**: Avoid detection by AI observers
   - Observers patrol waypoints and detect the player using raycasting
   - If spotted, the game ends and restarts
+  - **Enhanced Visuals**: More pronounced vignette effect for atmospheric tension
 
-- **Shield Power-up**: Temporary protection from detection
-  - Collect shield pickups to disable observer detection for 6 seconds
-  - Use strategically to pass through dangerous areas
+- **Shield Power-up**: Destroy enemies with temporary invincibility
+  - Collect shield pickups to gain the ability to destroy ghosts on contact
+  - Shield lasts for 10 seconds - use strategically to eliminate threats
+  - When shielded, any observer that detects you will be destroyed instead of catching you
 
 - **Waypoint Patrol System**: AI enemies follow predefined patrol routes
   - Configurable waypoint paths
@@ -54,9 +60,10 @@ AI patrol behavior:
 
 #### `Shield.cs`
 Power-up system:
-- Temporarily disables observer detection colliders
-- 6-second duration (configurable)
-- Auto-reactivates observers after duration
+- When collected, enables player to destroy ghosts on contact
+- 10-second duration (configurable)
+- Uses static flag to track shield status across all observers
+- Automatically expires after duration
 
 #### `GameEnding.cs`
 Manages win/lose conditions:
@@ -103,18 +110,27 @@ Assets/
 4. **Shield Timing**: Save shields for difficult sections with multiple observers
 5. **Plan Your Route**: Scout the level to find the safest path to the exit
 
+## 🎨 Recent Updates
+
+- **Enhanced Vignette**: Added a more pronounced vignette effect for increased atmospheric tension
+- **Sprint Button**: Implemented Left Shift sprint functionality for faster movement
+- **Shield System**: Redesigned shield power-up to destroy enemies on contact for 10 seconds instead of just disabling detection
+
 ## 🐛 Known Issues
 
 - Shadow atlas warning may appear in console (can be resolved by adjusting Quality Settings)
-- Shield power-up uses Invoke method (ensure GameObject remains active for callback to work)
 
 ## 📝 License
 
 This project is created for educational purposes as part of a final assignment.
 
+## 👥 Team
+
+**Ethan Handler** - Solo Developer
+
 ## 👤 Author
 
-Created as a final assignment project.
+Created as a final assignment project by Ethan Handler.
 
 ---
 

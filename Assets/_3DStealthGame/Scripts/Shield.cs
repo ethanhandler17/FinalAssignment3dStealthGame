@@ -1,41 +1,47 @@
 using UnityEngine;
+using System.Collections;
 
 public class Shield : MonoBehaviour
 {
-    // Gets the ghosts pointOfView collider and disables it   
-    public Collider ghostCollider;
-    public Collider ghostCollider2;
-
+    // Static variable to track if player is currently shielded
+    public static bool IsPlayerShielded = false;
+    
+    // Reference to the player collider
     public Collider playerCollider;
-    public float shieldTime = 6f;
+    // Duration of the shield effect in seconds
+    public float shieldTime = 10f;
 
-    // On trigger enter, disable the ghostCollider for the shield time.
+    // On trigger enter, activate shield when player picks it up
     void OnTriggerEnter (Collider other)
     {
-        // Check if the other object is the player.
+        // Check if the other object is the player
         if (other.transform == playerCollider.transform)
         {
-            // Disable the ghostCollider for the shield time.
-            ghostCollider.enabled = false;
-            ghostCollider2.enabled = false;
-            // Enable the ghostCollider after the shield time.
-            Invoke("EnableGhostCollider", shieldTime);
-            // Moves the shield object to 10000 units away from the player
-            gameObject.transform.position = new Vector3(10000, 10000, 10000);
+            // Activate shield mode
+            StartCoroutine(ActivateShield());
+            // Hide/destroy the shield pickup
+            GetComponent<Renderer>().enabled = false;
+            GetComponent<Collider>().enabled = false;
             // Console log that shows the player has been shielded
-            Debug.Log("Player has been shielded");
-            // Console log that shows the shield time
-            Debug.Log("Shield time: " + shieldTime);
+            Debug.Log("Player has been shielded for " + shieldTime + " seconds");
         }
     }
 
-    // Enable the ghostCollider after the shield time.
-    void EnableGhostCollider()
+    // Coroutine to activate shield for the specified duration
+    IEnumerator ActivateShield()
     {
-        ghostCollider.enabled = true;
-        // Console log that shows the ghostCollider has been enabled
-        Debug.Log("ghostCollider has been enabled");
-        ghostCollider2.enabled = true;
+        // Enable shield mode
+        IsPlayerShielded = true;
         
+        // Wait for the shield duration
+        yield return new WaitForSeconds(shieldTime);
+        
+        // Disable shield mode
+        IsPlayerShielded = false;
+        // Console log that shows the shield has expired
+        Debug.Log("Shield has expired");
+        
+        // Destroy the shield object after use
+        Destroy(gameObject);
     }
 }
