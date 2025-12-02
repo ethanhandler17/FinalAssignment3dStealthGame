@@ -10,7 +10,7 @@ A Unity 6.2 stealth game where players must navigate through a level while avoid
 
 ### Core Mechanics
 - **Player Movement**: Smooth third-person movement with walk/run mechanics
-  - Walk with WASD/Arrow Keys
+  - Walk with WASD
   - **Sprint Button**: Hold Left Shift to sprint and move faster
   - Smooth rotation and movement animations
 
@@ -41,7 +41,7 @@ A Unity 6.2 stealth game where players must navigate through a level while avoid
 
 #### `PlayerMovement.cs`
 Handles player input and movement using Unity's Input System:
-- WASD/Arrow key movement
+- WASD/ movement
 - Left Shift for running
 - Smooth character rotation
 - Animation integration
@@ -98,7 +98,7 @@ Assets/
 4. Press Play to start the game
 
 ### Controls
-- **WASD** / **Arrow Keys**: Move
+- **WASD** Move
 - **Left Shift**: Run
 
 ## 🎯 Gameplay Tips
@@ -109,7 +109,7 @@ Assets/
 4. **Shield Timing**: Save shields for difficult sections with multiple observers
 5. **Plan Your Route**: Scout the level to find the safest path to the exit
 
-## 🎨 Recent Updates
+## 🎨 ADDED FEATURES
 
 - **Enhanced Vignette**: Added a more pronounced vignette effect for increased atmospheric tension
 - **Sprint Button**: Implemented Left Shift sprint functionality for faster movement
