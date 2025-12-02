@@ -100,7 +100,6 @@ Assets/
 ### Controls
 - **WASD** / **Arrow Keys**: Move
 - **Left Shift**: Run
-- **Mouse**: Look around (if camera controls are enabled)
 
 ## 🎯 Gameplay Tips
 
@@ -115,10 +114,6 @@ Assets/
 - **Enhanced Vignette**: Added a more pronounced vignette effect for increased atmospheric tension
 - **Sprint Button**: Implemented Left Shift sprint functionality for faster movement
 - **Shield System**: Redesigned shield power-up to destroy enemies on contact for 10 seconds instead of just disabling detection
-
-## 🐛 Known Issues
-
-- Shadow atlas warning may appear in console (can be resolved by adjusting Quality Settings)
 
 ## 📝 License
 
