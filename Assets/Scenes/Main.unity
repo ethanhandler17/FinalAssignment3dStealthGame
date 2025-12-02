@@ -1140,6 +1140,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4820016631146141167}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &544322838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6570354559345598350, guid: a2d842e6afcdf27429403fa3d01747fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1274124452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &567637495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9165100296482953549, guid: d87a8bde178911443bf5192f45745118,
@@ -1303,6 +1309,11 @@ PrefabInstance:
     - target: {fileID: 5516216721385154884, guid: a2d842e6afcdf27429403fa3d01747fa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183833900263145252, guid: a2d842e6afcdf27429403fa3d01747fa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2558,6 +2569,11 @@ PrefabInstance:
       propertyPath: playerCollider
       value: 
       objectReference: {fileID: 1007275261}
+    - target: {fileID: 3075834729866360404, guid: 9040732eb056cd544aeae812c53e2666,
+        type: 3}
+      propertyPath: playerShieldVisual
+      value: 
+      objectReference: {fileID: 544322838}
     - target: {fileID: 6357349629326972952, guid: 9040732eb056cd544aeae812c53e2666,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2612,6 +2628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShieldPowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227108150785181698, guid: 9040732eb056cd544aeae812c53e2666,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

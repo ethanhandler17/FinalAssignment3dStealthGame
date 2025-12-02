@@ -4,7 +4,7 @@ A Unity 6.2 stealth game where players must navigate through a level while avoid
 
 **GitHub Repository**: [https://github.com/ethanhandler17/FinalAssignment3dStealthGame](https://github.com/ethanhandler17/FinalAssignment3dStealthGame)
 
-**Gameplay Video**: [Watch on YouTube](https://youtube.com/shorts/QnBGe6-5jmM)
+**Gameplay Video**: [Watch on YouTube](https://youtu.be/EbwQ8-Ig1ls)
 
 ## 🎮 Game Features
 
@@ -23,6 +23,7 @@ A Unity 6.2 stealth game where players must navigate through a level while avoid
   - Collect shield pickups to gain the ability to destroy ghosts on contact
   - Shield lasts for 10 seconds - use strategically to eliminate threats
   - When shielded, any observer that detects you will be destroyed instead of catching you
+  - **Visual Feedback**: Shield visual appears on the player when active, providing clear indication of shield status
 
 - **Waypoint Patrol System**: AI enemies follow predefined patrol routes
   - Configurable waypoint paths
@@ -64,6 +65,7 @@ Power-up system:
 - 10-second duration (configurable)
 - Uses static flag to track shield status across all observers
 - Automatically expires after duration
+- Manages shield visual GameObject on player (enables/disables based on shield status)
 
 #### `GameEnding.cs`
 Manages win/lose conditions:
@@ -114,6 +116,7 @@ Assets/
 - **Enhanced Vignette**: Added a more pronounced vignette effect for increased atmospheric tension
 - **Sprint Button**: Implemented Left Shift sprint functionality for faster movement
 - **Shield System**: Redesigned shield power-up to destroy enemies on contact for 10 seconds instead of just disabling detection
+- **Shield Visual**: Added visual feedback - shield GameObject appears on player when shield is active
 
 ## 📝 License
 
